@@ -13,59 +13,59 @@ const ContactForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  
-  // const templateParams = {
-    //   name: formData.name,
-    //   email: formData.email,
-    //   message: formData.message,
-    //   time: new Date().toLocaleString(),
-    // };
-    
-    // emailjs
-    //   .send(
-      //     "service_zvzk778",       // replace with your EmailJS service ID
-      //     "template_a17x463",      // replace with your EmailJS template ID
-      //     templateParams,
-      //     "lxjvQw39Ecq4MUc2J"        // replace with your EmailJS public key
-      //   )
-      //   .then(
-        //     (response) => {
-          //       console.log("SUCCESS!", response.status, response.text);
-          //       setSubmitted(true);
-          //       setFormData({ name: "", email: "", message: "" });
-          //       setTimeout(() => setSubmitted(false), 5000); // hide success message after 5s
-          //     },
-    //     (err) => {
-    //       console.log("FAILED...", err);
-    //     }
-    //   );
-    
 const handleSubmit = async (e) => {
   e.preventDefault();
-
-  try {
-    const res = await fetch(
-      "https://hackvent-backend.onrender.com/api/user/send-email",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      }
-    );
-
-    if (res.ok) {
-      setSubmitted(true);
-      setFormData({ name: "", email: "", message: "" });
-      setTimeout(() => setSubmitted(false), 5000); // hide message after 5s
-    } else {
-      const errMsg = await res.text();
-      alert("Error sending message: " + errMsg);
-    }
-  } catch (err) {
-    console.error(err);
-    alert("Error sending message: " + err.message);
-  }
+  
+  const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+      time: new Date().toLocaleString(),
+    };
+    
+    emailjs
+      .send(
+          "service_zvzk778",
+          "template_a17x463",
+          templateParams,
+          "lxjvQw39Ecq4MUc2J"
+        )
+        .then(
+            (response) => {
+                console.log("SUCCESS!", response.status, response.text);
+                setSubmitted(true);
+                setFormData({ name: "", email: "", message: "" });
+                setTimeout(() => setSubmitted(false), 5000); // hide success message after 5s
+              },
+        (err) => {
+          console.log("FAILED...", err);
+        }
+      );
+    
 };
+  // try {
+  //   const res = await fetch(
+  //     "https://hackvent-backend.onrender.com/api/user/send-email",
+  //     {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify(formData),
+  //     }
+  //   );
+
+  //   if (res.ok) {
+  //     setSubmitted(true);
+  //     setFormData({ name: "", email: "", message: "" });
+  //     setTimeout(() => setSubmitted(false), 5000); // hide message after 5s
+  //   } else {
+  //     const errMsg = await res.text();
+  //     alert("Error sending message: " + errMsg);
+  //   }
+  // } catch (err) {
+  //   console.error(err);
+  //   alert("Error sending message: " + err.message);
+  // }
+
 
 
   return (
