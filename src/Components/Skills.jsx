@@ -27,7 +27,7 @@ export default function Skills() {
     <section id="skills" className="w-full py-20 px-6 md:px-16 lg:px-32 flex flex-col items-center">
       <h2 className="text-4xl md:text-5xl font-bold text-white">Skills</h2>
       <p className="text-center text-violet-500 text-3xl font-bold">Hover below</p>
-      <div className="w-full h-[500px] relative">
+      <div className="w-full h-[500px] relative border border-dashed border-2">
         <ImageTrail items={skillIcons} variant={1} />
       </div>
     </section>
