@@ -54,7 +54,7 @@ const ProjectCard = ({ icon, title, description, color, github, live }) => {
             <Code className="w-5 h-5 relative z-10" />
             <span className="relative z-10">Source Code</span>
           </a>
-
+          { live !== "#" &&
           <a
             href={live}
             target="_blank"
@@ -62,7 +62,7 @@ const ProjectCard = ({ icon, title, description, color, github, live }) => {
             className="w-12 h-12 bg-gray-700 group-hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors duration-500 cursor-target"
           >
             <Globe className="w-6 h-6 text-white" />
-          </a>
+          </a>}
         </div>
       </div>
     </div>
