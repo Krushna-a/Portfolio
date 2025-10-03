@@ -43,7 +43,7 @@ const ProjectCard = ({ icon, title, description, color, github, live }) => {
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative flex items-center gap-2 px-6 py-3 bg-gray-700 text-white rounded-lg font-medium shadow-lg shadow-blue-500/50 overflow-hidden group/btn"
+            className="relative flex items-center gap-2 px-6 py-3 bg-gray-700 text-white rounded-lg font-medium shadow-lg shadow-blue-500/50 overflow-hidden group/btn cursor-target cursor-pointer"
           >
             <span
               className={`absolute inset-0 bg-red-700 transition-all duration-700 ease-out ${color}`}
@@ -65,7 +65,7 @@ const ProjectCard = ({ icon, title, description, color, github, live }) => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative flex items-center gap-2 px-4 py-3 bg-gray-700 text-white rounded-lg font-medium shadow-lg shadow-blue-500/50 overflow-hidden group/btn"
+                className="relative flex items-center gap-2 px-4 py-3 bg-gray-700 text-white rounded-lg font-medium shadow-lg shadow-blue-500/50 overflow-hidden group/btn cursor-target cursor-pointer"
               >
                 <span
                   className={`absolute inset-0 bg-red-700 transition-all duration-700 ease-out ${color}`}

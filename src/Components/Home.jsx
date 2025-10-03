@@ -70,7 +70,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="relative group px-6 py-3 rounded-lg font-semibold text-pink-400 border-2 border-pink-400 overflow-hidden hover:text-white transition-all duration-300 cursor-target"
           >
-            <span className="relative z-10">View Resume</span>
+            <span className="relative z-10 ">View Resume</span>
             <span className="absolute inset-0 bg-pink-400 scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500"></span>
           </a>
         </Reveal>
