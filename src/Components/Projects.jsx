@@ -102,7 +102,9 @@ const Projects = () => {
         "AI-powered platform for Kolam generation with marketplace, competitions, and student communities. Won recognition in SIH for innovation. Built with React.js, Tailwind, FastAPI, and MongoDB. Integrated Cloudinary for media storage and Razorpay for secure payments.",
       color: "bg-gradient-to-b from-blue-600 to-blue-800",
       github: "https://github.com/Krushna-a/SIH-Kolam-website",
-      live: [{ label: "Live Site", url: "https://sih-kolam-website.vercel.app/" }],
+      live: [
+        { label: "Live Site", url: "https://sih-kolam-website.vercel.app/" },
+      ],
     },
     {
       icon: (
@@ -119,7 +121,9 @@ const Projects = () => {
         "Aggregates inter-college hackathons and events across Pune. Built with React.js frontend, Express.js backend, and MongoDB. Secure authentication with Passport.js and RESTful APIs for CRUD operations.",
       color: "bg-gradient-to-b from-purple-600 to-purple-800",
       github: "https://github.com/Krushna-a/HackVent-Backend",
-      live: [{ label: "Live Site", url: "https://hack-vent-frontend.vercel.app/" }],
+      live: [
+        { label: "Live Site", url: "https://hack-vent-frontend.vercel.app/" },
+      ],
     },
     {
       icon: (
@@ -166,13 +170,20 @@ const Projects = () => {
         </svg>
       ),
       title: "Forever E-commerce",
-      description:
-        "Full-stack e-commerce website with separate admin and user frontends. Features product management, user authentication, cart & checkout system, and responsive design. Built with modern web stack for scalable performance.",
+      description: `A full-stack e-commerce platform with separate frontends for admins and users. Features include product management, secure user authentication, a seamless cart and checkout system, and a fully responsive design. Built with a modern web stack for scalable performance.\n\n
+
+
+⚠️ Admin Panel Access:
+ADMIN_USERNAME = krushna70
+ADMIN_PASSWORD = qwerty123`,
       color: "bg-gradient-to-b from-blue-600 to-blue-800",
       github: "https://github.com/Krushna-a/forever",
       live: [
-        { label: "User Site", url: "https://forever-gagirwyxa-krushna-as-projects.vercel.app/" },
-        { label: "Admin Panel", url: "https://forever-4bo3.vercel.app/" }
+        {
+          label: "User Site",
+          url: "https://forever-gagirwyxa-krushna-as-projects.vercel.app/",
+        },
+        { label: "Admin Panel", url: "https://forever-4bo3.vercel.app/" },
       ],
     },
   ];
